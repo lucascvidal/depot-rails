@@ -101,3 +101,18 @@ header.main {
   padding: 1em 1.414em;
   text-align: center;
 }
+
+#cart article {
+  background: white;
+  border-radius: 0.5em;
+  margin: 1em;
+  padding: 1.414em;
+}
+
+#cart article h2 {
+  margin-top: 0;
+
+  @media (min-width: 30em) {
+    margin: 0; 
+  }
+}
