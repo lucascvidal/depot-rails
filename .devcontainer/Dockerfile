@@ -1,6 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/ruby:1-3.3-bullseye
+FROM ruby:3.3.0-bullseye
 
-RUN curl -fsSL https://deb.nodesource.com/setup_21.x | bash - && apt-get install -y nodejs
-
-RUN npx @puppeteer/browsers install chrome@122.0.6261.111
-RUN npx @puppeteer/browsers install chromedriver@122.0.6261.111
+RUN apt update && apt install -y build-essential git libsqlite3-dev redis ruby-dev tzdata libnss3-dev libgdk-pixbuf2.0-dev libgtk-3-dev libxss-dev libasound2
+RUN gem install rails -v 7.1.3.2 --no-document
