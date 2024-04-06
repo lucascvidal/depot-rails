@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  
+  rescue_from 'User::Error' do |exception|
+    redirect_to users_url, notice: exception.message
+  end
 
   # GET /users or /users.json
   def index
@@ -52,7 +56,7 @@ class UsersController < ApplicationController
     @user.destroy!
 
     respond_to do |format|
-      format.html { redirect_to users_url, notice: "User was successfully destroyed." }
+      format.html { redirect_to users_url, notice: "User #{@user.name} deleted." }
       format.json { head :no_content }
     end
   end
