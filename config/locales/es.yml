@@ -27,29 +27,29 @@
 #       "yes": yup
 #       enabled: "ON"
 
-en:
+es:
   layouts:
     application:
-      title: "The Pragmatic Bookshelf"
-      home: "Home"
-      questions: "Questions"
-      news: "News"
-      contact: "Contact"
+      title: "Biblioteca de Pragmatic"
+      home: "Inicio"
+      questions: "Preguntas"
+      news: "Noticias"
+      contact: "Contacto"
   store:
     index:
-      title_html: "Your Pragmatic Catalog"
+      title_html: "Su Catálogo de Pragmatic"
     product:
-      add_html: "Add to Cart"
+      add_html: "Añadir al Carrito"
   carts:
     cart:
-      title: "Your Cart"
-      empty: "Empty cart"
-      checkout: "Checkout"
+      title: "Carrito de la Compra"
+      empty: "Vaciar Carrito"
+      checkout: "Comprar"
   number:
     currency:
       format:
-        unit: "$"
+        unit: "$US"
         precision: 2
-        separator: "."
-        delimiter: ","
-        format: "%u%n"
+        separator: ","
+        delimiter: "."
+        format: "%n %u"
